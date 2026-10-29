@@ -1,0 +1,14 @@
+# build output
+out/
+cache/
+broadcast/
+
+# env / secrets
+.env
+.env.*
+
+# tests
+test/
+
+# dependencies (git submodules)
+lib/

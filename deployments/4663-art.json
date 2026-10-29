@@ -1,0 +1,9 @@
+{
+  "art": "0x7084541C1eF9eF328535936fedadA34666DA18d0",
+  "baseURI": "https://stardustllm.xyz/api/art/",
+  "block": 100890202,
+  "chainId": 4663,
+  "priceFeed": "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9",
+  "startTime": 1793275609,
+  "treasury": "0x4D6D25f667D5Ab10815317575Eb9A575A4064A01"
+}

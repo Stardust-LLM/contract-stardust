@@ -1,0 +1,9 @@
+{
+  "art": "0x75925248F19231B92A1bC89B247a79F153c08E8b",
+  "baseURI": "https://stardust.xyz/api/art/",
+  "block": 144635306,
+  "chainId": 46630,
+  "priceFeed": "0xF865E75fE416BEd3C45d464DfE4ec640D32fC4bD",
+  "startTime": 1793256423,
+  "treasury": "0x4D6D25f667D5Ab10815317575Eb9A575A4064A01"
+}

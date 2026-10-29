@@ -1,0 +1,42 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.28"
+evm_version = "cancun" # Robinhood Chain is an Arbitrum Orbit chain (Cancun opcodes supported)
+optimizer = true
+optimizer_runs = 10_000
+remappings = [
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "forge-std/=lib/forge-std/src/",
+]
+fs_permissions = [{ access = "read", path = "./" }, { access = "read-write", path = "./deployments" }]
+
+[lint]
+# contracts are linted; tests and scripts move test tokens around on purpose
+ignore = ["test/**/*.sol", "script/**/*.sol"]
+
+[fuzz]
+runs = 2_000
+seed = "0x5354415244555354" # deterministic runs; change or remove for new random cases
+
+[invariant]
+runs = 256
+depth = 120
+fail_on_revert = true # a failing assert inside the handler must fail the run
+
+[profile.ci.fuzz]
+runs = 20_000
+
+[profile.ci.invariant]
+runs = 1_000
+depth = 200
+
+[rpc_endpoints]
+robinhood_testnet = "https://rpc.testnet.chain.robinhood.com/rpc"
+robinhood_mainnet = "https://rpc.mainnet.chain.robinhood.com/rpc"
+
+[etherscan]
+robinhood_testnet = { key = "${EXPLORER_API_KEY}", chain = 46630, url = "https://explorer.testnet.chain.robinhood.com/api" }
